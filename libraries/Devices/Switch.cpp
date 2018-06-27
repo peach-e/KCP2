@@ -1,10 +1,10 @@
 #include "Arduino.h"
 #include "Switch.h"
 
-//Switch(unsigned char pin, PinMode pinMode)
-//{
+Switch::Switch(unsigned char pin, uint8_t pinMode)
+{
 	
-//}
+}
 
 bool Switch::getState() const
 {

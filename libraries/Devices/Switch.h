@@ -20,7 +20,7 @@ class Switch
 		unsigned char m_pin; //Range: 0-255
 		
 	public:
-		//Switch(unsigned char pin, PinMode pinMode);
+		Switch(unsigned char pin, uint8_t pinMode); //for pinMode(), see C:\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino\wiring_digital.c
 		bool getState() const;
 		
 };
