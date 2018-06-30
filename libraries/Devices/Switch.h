@@ -4,23 +4,20 @@
 #include "Arduino.h"
 
 
-/*-----------------------------------------------------------------------
+/*------------------------------------------------------------------------------
 
-Purpose: [A description of why this class exists.  For what reason was it written?  Which jobs does it perform?]
+Purpose: Model of ON/OFF switch. Has child which models a momentary button.
 
-Constructors: [names & arguments]
-
-Methods: [return type, names, & arguments of all public methods]
-
------------------------------------------------------------------------*/
+------------------------------------------------------------------------------*/
 class Switch
 {
 	private:
 		bool m_state;
-		unsigned char m_pin; //Range: 0-255
+		uint8_t m_pin; //Range: 0-255
 		
 	public:
-		Switch(unsigned char pin, uint8_t pinMode); //for pinMode(), see C:\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino\wiring_digital.c
+		Switch(uint8_t pin, uint8_t mode); //for pinMode(), see C:\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino\wiring_digital.c
+		void refreshState();
 		bool getState() const;
 		
 };
