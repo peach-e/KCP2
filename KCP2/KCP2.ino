@@ -12,8 +12,6 @@
 void setup()
 {
 	Serial.begin(BAUDRATE);
-	
-	//setPinAssignment(); TBD - remove
 		
 	executeTest();
 	

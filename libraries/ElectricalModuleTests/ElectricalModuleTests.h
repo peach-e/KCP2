@@ -11,7 +11,9 @@ Purpose: Output system state for each Module to test electrical wiring.
 ------------------------------------------------------------------------------*/
 void displayModuleA()
 {
-	Serial.print("Switch test: "); Serial.println(v);//switch_test.getState());
+  switch_test.refreshState();
+  Serial.print("Switch test: ");
+  Serial.println(switch_test.getState());
 }
 
 //==============================================================================
@@ -21,7 +23,7 @@ void executeTest()
 	{
 		//Clear screen:
 		Serial.print("\n"); // "\r\n" ?
-		
+
 		//Display Module Status
 		displayModuleA();
 		//displayModuleB();
@@ -36,7 +38,7 @@ void executeTest()
 		//displayModuleK();
 		//displayModuleL();
 		//displayModuleM();
-		
+
 		//Wait
 		delay(200);
 	}

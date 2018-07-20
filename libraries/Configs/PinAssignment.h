@@ -2,7 +2,7 @@
 #define PinAssignment_h
 
 #include "Arduino.h"
-
+#include "Switch.h"
 
 /*------------------------------------------------------------------------------
 
@@ -10,12 +10,7 @@ Purpose: Create all HW models and specify Pin Assignment.
 
 ------------------------------------------------------------------------------*/
 
-//void setPinAssignment()
-//{
-
 //Module A
-//Switch switch_test(17, INPUT_PULLUP);
-int v = 5;
-//}
+Switch switch_test(6, INPUT_PULLUP);
 
 #endif
